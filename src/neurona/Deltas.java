@@ -11,6 +11,7 @@ public class Deltas {
     private double dw1;
     private double dw2;
     private double dO;
+    private double alpha;
     private Pesos p;
     
     
@@ -21,14 +22,21 @@ public class Deltas {
      * @param dw2
      * @param dO 
      */
-    public Deltas(Pesos p) {
+    public Deltas(Pesos p, double alpha) {
         this.p = p;
-        // this.ftmy = ftmy; Unknown calculation
+        this.ftmy = alpha * calcTmy();
         this.dw1 = p.isX1() == true ? ftmy : 0;
         this.dw2 = p.isX2() == true ? ftmy : 0;
         this.dO = ftmy * -1;
     }
     
+    public double calcTmy() {
+        if(!p.isT() && p.isY()) {
+            return -1;
+        } else if(p.isT() && !p.isY()) {
+            return 1;
+        } else return 0;
+    }
     
     /**
      * Getters and Setters 

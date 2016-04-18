@@ -5,7 +5,7 @@ package neurona;
  * @author jesusgtz
  */
 public class Neurona {
-
+    
     /**
      * @param args the command line arguments
      */
