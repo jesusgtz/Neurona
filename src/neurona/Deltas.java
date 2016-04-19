@@ -14,6 +14,14 @@ public class Deltas {
     private double alpha;
     private Pesos p;
     
+    //Constructor por defecto
+    public Deltas() {
+        this.p = null;
+        this.ftmy = 0;
+        this.dw1 = 0;
+        this.dw2 = 0;
+        this.dO = 0;
+    }
     
     /**
      * Constructor

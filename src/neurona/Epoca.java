@@ -6,8 +6,8 @@ package neurona;
  */
 public class Epoca {
     //Atributos
-    private Pesos pe[];
-    private Deltas de[];
+    public Pesos pe[];
+    public Deltas de[];
     
     //Constructor por defecto
     public Epoca() {}
